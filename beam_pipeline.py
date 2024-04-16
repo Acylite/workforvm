@@ -1,19 +1,5 @@
-import pandas as pd
+
 import subprocess
-import apache_beam as beam
-import io
-import csv
-from apache_beam.options.pipeline_options import PipelineOptions
-from apache_beam.testing.test_pipeline import TestPipeline
-from apache_beam.testing.util import assert_that
-from apache_beam.testing.util import equal_to
-from typing import Tuple
-import json 
-from datetime import datetime
-
-# Define the requirements file
-requirements_file = "requirements.txt"
-
 def install_requirements(requirements_file: str):
     try:
         # Execute pip install command
@@ -21,6 +7,18 @@ def install_requirements(requirements_file: str):
         print("Dependencies installed successfully.")
     except subprocess.CalledProcessError as e:
         print(f"Error: Failed to install dependencies. {e}")
+install_requirements('requirements.txt')
+import apache_beam as beam
+import io
+import csv
+import pandas as pd
+from apache_beam.options.pipeline_options import PipelineOptions
+from apache_beam.testing.test_pipeline import TestPipeline
+from apache_beam.testing.util import assert_that
+from apache_beam.testing.util import equal_to
+from typing import Tuple
+import json 
+from datetime import datetime
 
 # Define the pipeline options
 options = PipelineOptions()
@@ -94,7 +92,7 @@ def test_process_data_transform():
         test_result = (p | beam.Create(test_data) | ProcessDataTransform())
         assert_that(test_result, equal_to(expected_output))
     print("test pipeline ran successfully.")
+
 if __name__ == "__main__":
-    #install_requirements(requirements_file)
     test_process_data_transform() #This test throws an error on the final step because it is not a date format 
-    
+    run()
