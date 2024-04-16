@@ -1,17 +1,3 @@
-# Data Engineer Tech Test
-
-This is a simple tech test asking you to write some Python program with a purpose to verify your learning capability and Python skills. 
-Please note that we do expect you to have sufficient Python skills but not on the specific tech stack required. The expectation
-is that if you don't know about something, learn how to use it by reading and trying to solve the problem. There are 
-plenty of tutorials and examples online, and you can Google as much as you like to complete the task. 
-
-Do get prepared on explaining what you have done, especially when third party code or tutorial code have been used.
-
-## Overall requirement
-1. Once the solution is finished, please store it in a public Git repository on GitHub (this is free to create) and share the link with us
-1. The solution should be working e2e, and ideally we would expect to clone the repo and run a single command to get the output. 
-1. You do not have to use Cloud Dataflow, Direct Runner is fine
-
 ## Task 1
 Write an Apache Beam batch job in Python satisfying the following requirements 
 1. Read the input from `gs://cloud-samples-data/bigquery/sample-transactions/transactions.csv`
