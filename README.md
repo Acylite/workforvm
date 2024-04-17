@@ -13,6 +13,7 @@ OR
 
 ###########################################################################################################
 About dependencies    
+
 No need to run any 'pip' commands
 ive included the pip install for the requirements.txt inside the script. 
 
