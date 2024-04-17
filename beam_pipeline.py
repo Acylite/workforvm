@@ -2,7 +2,7 @@
 import subprocess
 def install_requirements(requirements_file: str):
     try:
-        # Execute pip install command
+        # Execute pip install command before importing relevant libraries
         subprocess.check_call(["pip", "install", "-r", requirements_file])
         print("Dependencies installed successfully.")
     except subprocess.CalledProcessError as e:
