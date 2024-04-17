@@ -12,7 +12,7 @@ OR
 "python3 beam_pipeline.py"
 
 ###########################################################################################################
-About dependencies
+About dependencies  
 No need to run any 'pip' commands
 ive included the pip install for the requirements.txt inside the script. 
 
