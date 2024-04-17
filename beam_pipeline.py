@@ -80,7 +80,7 @@ def run():
 def test_process_data_transform():
     # Define test data
     test_data = [["2024-04-16 10:00:00 UTC", "123", "456", "30"],  # Valid data
-                 ["2022-01-01 10:00:00 UTC", "123", "456", "10"],  # Year <= 2009
+                 ["2001-01-01 10:00:00 UTC", "123", "456", "10"],  # Year <= 2009
                  ["2024-04-16 10:00:00 UTC", "123", "456", "10"],  # Amount <= 20
                  ["invalid_data", "123", "456", "30"]]  # Invalid date format
     
